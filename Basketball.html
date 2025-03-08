@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Basketball</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4a261;
+            overflow: hidden;
+        }
+        .basketball {
+            width: 200px;  /* Adjusted size */
+            height: 200px; /* Adjusted size */
+            font-size: 200px; /* Scale up the emoji */
+            text-align: center;
+            line-height: 120px; /* Center the emoji vertically */
+            background-color: orange;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 50px;
+            cursor: pointer;
+            box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.2), inset 5px 5px 10px rgba(255, 255, 255, 0.2);
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-500px); }
+        }
+    </style>
+</head>
+<body>
+    <style>
+        .move-paragraph {
+          position: relative;
+          top: -400px;  /* Move it 20px down */
+        }
+      </style>
+      
+      <p class="move-paragraph">This basketball is for <strong>Lebron James</strong></p>
+    <div class="basketball" onclick="bounceBall()">🏀</div>
+    
+    <script>
+        function bounceBall() {
+            let ball = document.querySelector('.basketball');
+            ball.style.animation = 'bounce 0.5s ease-in-out';
+            setTimeout(() => { ball.style.animation = ''; }, 500);
+        }
+    </script>
+</body>
+</html>
