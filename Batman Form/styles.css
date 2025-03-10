@@ -1,0 +1,149 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Cool, modern font */
+    background-color: #2e2e2e; /* Charcoal grey background */
+    color: #f1f1f1; /* Light text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: middle;
+    align-items: center; /* Align to the top */
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow body to scroll when content overflows */
+  }
+  
+  /* Title styling */
+  h1 {
+    color: #f1f1f1;
+    font-size: 2.5rem; /* Adjusted size to fit better */
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Description styling */
+  p#description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    margin-top: 0; /* Adjusted to keep closer to the title */
+  }
+  
+  /* Form Styling */
+  #survey-form {
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px; /* Form width constraint */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem; /* Space between form and submit button */
+    overflow: hidden; /* Stop scrolling internally */
+  }
+  
+  /* Ensure form items are spaced well */
+  label, input, select, textarea, fieldset {
+    margin-bottom: 1rem; /* Add margin to ensure spacing between elements */
+    width: 100%;
+    max-width: 450px; /* Ensure inputs don't stretch too far */
+  }
+  
+  /* Label styling */
+  label {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  input, select, textarea {
+    background-color: #444;
+    color: #f1f1f1;
+    border: 2px solid #555;
+    border-radius: 4px;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  /* Input field styling */
+  input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+  }
+  
+  select {
+    padding: 0.8rem;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  /* Styling for the submit button */
+  #submit {
+    background-color: #1a1a1a; /* Dark button background */
+    color: #f1f1f1; /* Button text color */
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  #submit:hover {
+    background-color: #ffcc00; /* Batman yellow on hover */
+    color: #333; /* Darker text color when hovered */
+  }
+  
+  /* Focus effects for inputs */
+  input:focus, select:focus, textarea:focus {
+    border-color: #ffcc00; /* Batman yellow focus */
+    outline: none;
+  }
+  
+  /* Styling for radio and checkboxes */
+  fieldset {
+    border: none; /* Remove border */
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffcc00; /* Batman yellow */
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    #survey-form {
+      padding: 1rem;
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    p#description {
+      font-size: 1rem;
+    }
+  
+    #survey-form {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  

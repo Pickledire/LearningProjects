@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+      </head>      
+<body>
+
+  
+  <h1 id="title">Survey Form</h1>
+
+  
+  <p id="description">
+    Please fill out this survey form to help us improve our services. Your responses are valuable to us.
+  </p>
+
+  
+  <form id="survey-form" action="#" method="POST">
+
+    
+    <label id="name-label" for="name">Enter your name:</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+    
+    <label id="email-label" for="email">Enter your email:</label>
+    <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+
+    
+    <label id="number-label" for="number">Enter a number (between 1 and 100):</label>
+    <input type="number" id="number" name="number" min="1" max="100" placeholder="1" required />
+
+    
+    <label for="dropdown">Select an option:</label>
+    <select id="dropdown" name="dropdown" required>
+      <option value="">Please choose an option</option>
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+    </select>
+
+    
+    <fieldset>
+      <legend>Select your preferred option:</legend>
+      <label>
+        <input type="radio" name="preferences" value="choice1" required /> Choice 1
+      </label>
+      <label>
+        <input type="radio" name="preferences" value="choice2" required /> Choice 2
+      </label>
+    </fieldset>
+
+    
+    <fieldset>
+      <legend>Select your hobbies:</legend>
+      <label>
+        <input type="checkbox" name="hobbies" value="coding" /> Coding
+      </label>
+      <label>
+        <input type="checkbox" name="hobbies" value="reading" /> Reading
+      </label>
+      <label>
+        <input type="checkbox" name="hobbies" value="travelling" /> Travelling
+      </label>
+    </fieldset>
+
+    
+    <label for="comments">Additional comments:</label>
+    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Any additional thoughts?" required></textarea>
+
+    
+    <button type="submit" id="submit">Submit</button>
+
+  </form>
+
+</body>
+</html>
